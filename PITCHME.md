@@ -4,15 +4,19 @@
 
 Github Pages 是什么？
 
-如果你没使用过 Git 版本控制系统以及 Github 代码托管平台，可能就会有点陌生。如果用过的话，那就好办了。
-
 ---
 
 用官方的话说，Github Pages 就是：
 
 > 为你或你的项目提供的网站。直接从你的 Github 仓库代码托管。仅仅需要编辑，推送，然后任何改变都是在线实时的。
 
-相关链接：[Github Pages 官网](https://pages.github.com/)，[Github Pages 帮助](https://help.github.com/categories/github-pages-basics/)
+---
+
+下面我们会讲三个方面：
+
+* 使用 Github Pages 作为项目页面
+* 使用 Github Pages 托管个人博客
+* 给 Github Pages 绑定个性域名
 
 ---
 
@@ -20,9 +24,11 @@ Github Pages 是什么？
 
 ---
 
-### 安装 Git
+在开始使用 Github Pages 之前，我们需要两样东西：Git 和 Github 账户
 
-如果没有使用过 Git 和 Github 的，让我们先从安装 Git 以及配置 Github 开始。会使用到命令行工具 MAC 或 Linux 系统都自带了 Shell 命令行软件，Windows 建议使用 [Cmder](http://cmder.net/)，体验更好。
+---
+
+### 安装 Git
 
 ---
 
@@ -32,7 +38,7 @@ MAC OS 下，如果你安装了 Homebrew，直接：
 brew install git
 ```
 
-Windows 也非常简单，下载安装 cmder full 版本的，包含了 Git for Windows 的安装了。
+Windows 也非常简单，下载安装 [cmder](http://cmder.net/) Full 版本的，包含了 Git for Windows 的安装了。
 
 ---
 
@@ -42,22 +48,7 @@ SSH Keys 是什么？SSH Keys 指的是在电脑上生成的一对密钥，包�
 
 ---
 
-SSH Keys 有什么常用用途？
-
-* 像 Github, Coding.net, gitlab 等等这样的代码托管平台都需要你的 SSH Keys 来验证身份
-* 如果你有一台服务器，在服务器添加你本地电脑的 SSH Keys，可以让你免密码通过 SSH 登陆服务器
-
----
-
-首先打开命令行工具，在生成之前先看下之前是不是已经有了
-
-```
-ls ~/.ssh
-```
-
----
-
-如果在这个目录的下面列出了 id_rsa 与 id_rsa.pub，说明已经有了，就不用再生成一次。如果没有，就需要使用下面的命令生成新的 SSH Keys:
+使用下面的命令生成新的 SSH Keys:
 
 ```
 ssh-keygen
@@ -79,11 +70,9 @@ ssh-keygen
 cat ~/.ssh/id_rsa.pub
 ```
 
-然后复制
-
 ---
 
-最后，在你的 Github 账户 -> settings -> SSH and GPG keys 中新增一个 SSH Keys 以及粘贴刚才复制的密钥。
+然后，在你的 Github 账户 -> settings -> SSH and GPG keys 中新增一个 SSH Keys 以及粘贴刚才复制的密钥。
 
 ---
 
@@ -193,7 +182,7 @@ hexo server
 * `description` -> 网站描述
 * `author` -> 你的名字
 * `language` -> 网站使用的语言
- 
+
 ️注意：在配置时，需要加上冒号:,冒号后面要加一个英文的空格
 
 ---
